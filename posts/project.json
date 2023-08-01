@@ -1,0 +1,24 @@
+{
+  "name": "posts",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "posts/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["posts/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/posts"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/posts"
+      }
+    }
+  }
+}

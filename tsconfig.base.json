@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@myreactapp/comments": ["comments/src/index.ts"],
+      "@myreactapp/modules/orders": ["modules/orders/src/index.ts"],
+      "@myreactapp/modules/products": ["modules/products/src/index.ts"],
+      "@myreactapp/modules/shared/ui": ["modules/shared/ui/src/index.ts"],
+      "@myreactapp/posts": ["posts/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

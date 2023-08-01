@@ -1,0 +1,24 @@
+{
+  "name": "comments",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "comments/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["comments/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/comments"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/comments"
+      }
+    }
+  }
+}
