@@ -9,11 +9,18 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    name: build&test
+    permissions:
+      contents: 'read'
+      actions: 'read'
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v3
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+
       - run: npm ci
 
       - run: npx nx format:check
