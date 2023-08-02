@@ -18,10 +18,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: uses Node 18
+        uses: action/setup-node@v3
+        with:
+          node-version: '18.x'
+
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3
 
-      - run: npm ci
+      - run: yarn --frozen-lockfile
 
       - run: npx nx format:check
       - run: npx nx affected -t lint --parallel=3
