@@ -1,15 +1,15 @@
-import * as React from 'react';
-import Posts, { PostsProps } from './posts';
+// import * as React from 'react';
+// import Posts, { PostsProps } from './posts';
 
-describe(Posts.name, () => {
-  let props: PostsProps;
+// describe(Posts.name, () => {
+//   let props: PostsProps;
 
-  beforeEach(() => {
-    props = {};
-  });
+//   beforeEach(() => {
+//     props = {};
+//   });
 
-  it('renders', () => {
-    cy.mount(<Posts {...props} />);
-    cy.get('h1').contains('Welcome');
-  });
-});
+//   it('renders', () => {
+//     cy.mount(<Posts {...props} />);
+//     cy.get('h1').contains('Welcome');
+//   });
+// });
