@@ -15,7 +15,8 @@ import PostIcon from '@mui/icons-material/Book';
 import UserIcon from '@mui/icons-material/Group';
 import { Dashboard } from './dashboard';
 import { authProvider } from './providers/auth';
-import { Comments } from '@myreactapp/comments';
+import { CommentsResource } from '@myreactapp/comments';
+import NotFound from './notFound';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
@@ -25,6 +26,7 @@ export default function App() {
       authProvider={authProvider}
       dataProvider={dataProvider}
       dashboard={Dashboard}
+      catchAll={NotFound}
     >
       <Resource
         name="users"
@@ -39,7 +41,7 @@ export default function App() {
         edit={PostEdit}
         create={PostCreate}
       />
-      <Resource name="comments" list={Comments} />
+      <Resource {...CommentsResource} />
     </Admin>
   );
 }
