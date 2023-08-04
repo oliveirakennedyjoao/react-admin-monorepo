@@ -1,5 +1,5 @@
-import { Edit, ReferenceInput, SimpleForm, TextInput } from "react-admin";
-import { PostTitle } from "../title";
+import { Edit, ReferenceInput, SimpleForm, TextInput } from 'react-admin';
+import { PostTitle } from '../title';
 
 export function PostEdit() {
   return (
