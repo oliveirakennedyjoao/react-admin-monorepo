@@ -6,7 +6,7 @@ import {
   ReferenceField,
   ReferenceInput,
   EditButton,
-} from "react-admin";
+} from 'react-admin';
 
 const postFilters = [
   <TextInput source="q" label="Search" alwaysOn />,
@@ -20,6 +20,7 @@ export function PostList() {
         <TextField source="id" />
         <ReferenceField source="userId" reference="users" />
         <TextField source="title" />
+        <TextField source="body" />
         <EditButton />
       </Datagrid>
     </List>
