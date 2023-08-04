@@ -1,15 +1,4 @@
-import {
-  Datagrid,
-  EditButton,
-  Link,
-  List,
-  //   ReferenceField,
-  TextField,
-  useRecordContext,
-} from 'react-admin';
-
-import { useParams } from 'react-router-dom';
-import { Button } from '@mui/material';
+import { Datagrid, EditButton, List, TextField } from 'react-admin';
 
 export function CommentList() {
   return (
@@ -20,21 +9,8 @@ export function CommentList() {
         <TextField source="name" />
         <TextField source="email" />
         <TextField source="body" />
-        {/* <ReferenceField source="userId" reference="users" /> */}
-        <EditSongButton />
+        <EditButton />
       </Datagrid>
     </List>
   );
 }
-
-const EditSongButton = () => {
-  const comment = useRecordContext();
-  return (
-    <Button
-      component={Link}
-      to={`/comments/${comment?.postId}/author/${comment?.id}`}
-    >
-      Edit
-    </Button>
-  );
-};
