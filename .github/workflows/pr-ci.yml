@@ -28,5 +28,5 @@ jobs:
 
       - run: npx nx format:check
 
-      - run: npx nx affected -t test --parallel=3 --configuration=ci
-      - run: npx nx affected -t build --parallel=3
+      - run: npx nx affected -t test --parallel=3 --configuration=ci --base=$NX_BASE --head=$NX_HEAD
+      - run: npx nx affected -t build --parallel=3 --base=$NX_BASE --head=$NX_HEAD

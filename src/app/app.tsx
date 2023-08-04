@@ -2,12 +2,12 @@ import { Admin, Resource } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 import { UserList } from './users';
 import { PostList, PostEdit, PostCreate } from '@myreactapp/posts';
+import { CommentList, CommentEdit, CommentCreate } from '@myreactapp/comments';
 
 import PostIcon from '@mui/icons-material/Book';
 import UserIcon from '@mui/icons-material/Group';
 import { Dashboard } from './dashboard';
 import { authProvider } from './providers/auth';
-import { CommentsResource } from '@myreactapp/comments';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
@@ -31,7 +31,12 @@ export default function App() {
         edit={PostEdit}
         create={PostCreate}
       />
-      <Resource {...CommentsResource} />
+      <Resource
+        name="comments"
+        list={CommentList}
+        edit={CommentEdit}
+        create={CommentCreate}
+      />
     </Admin>
   );
 }

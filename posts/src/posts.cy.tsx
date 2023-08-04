@@ -9,11 +9,13 @@ describe('Posts', () => {
     'https://jsonplaceholder.typicode.com'
   );
 
-  it('renders', () => {
+  it('renders list', () => {
     cy.mount(
       <Admin dataProvider={dataProvider}>
-        <Resource name="post" list={PostList}></Resource>
+        <Resource name="posts" list={PostList}></Resource>
       </Admin>
     );
+
+    cy.get('.column-body').should('exist');
   });
 });

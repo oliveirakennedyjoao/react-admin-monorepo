@@ -2,7 +2,7 @@ name: 'Changelog CI'
 
 on:
   push:
-    branches: [main]
+    tags: [main]
 
 jobs:
   release:
