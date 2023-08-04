@@ -1,0 +1,25 @@
+name: Push Main CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      actions: 'read'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Using Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - run: echo build pipe line runs ok.

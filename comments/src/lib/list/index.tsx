@@ -29,7 +29,6 @@ export function CommentList() {
 
 const EditSongButton = () => {
   const comment = useRecordContext();
-  console.log(comment);
   return (
     <Button
       component={Link}

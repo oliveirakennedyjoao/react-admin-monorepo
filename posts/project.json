@@ -13,14 +13,6 @@
       }
     },
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["coverage/posts"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../coverage/posts"
-      }
-    },
-    "component-test": {
       "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "posts/cypress.config.ts",

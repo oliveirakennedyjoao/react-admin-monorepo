@@ -8,6 +8,7 @@ export function Posts(props: PostsProps) {
     <div className={styles['container']}>
       <h1>Welcome to Posts!</h1>
       <h3>Third subtitle.</h3>
+      <h2>And see how it works!</h2>
     </div>
   );
 }

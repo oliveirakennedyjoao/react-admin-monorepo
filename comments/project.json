@@ -12,15 +12,8 @@
         "lintFilePatterns": ["comments/**/*.{ts,tsx,js,jsx}"]
       }
     },
+
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["coverage/comments"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../coverage/comments"
-      }
-    },
-    "component-test": {
       "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "comments/cypress.config.ts",
