@@ -6,7 +6,7 @@
 
 import { Admin, ListGuesser, Resource } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
-import { UserList } from './users';
+// import { UserList } from './users';
 // import { PostList, PostEdit, Pos } from '@myreactapp/posts';
 
 // import { PostList } from './posts/list';
@@ -14,7 +14,7 @@ import { UserList } from './users';
 // import { PostCreate } from './posts/create';
 
 // import PostIcon from '@mui/icons-material/Book';
-import UserIcon from '@mui/icons-material/Group';
+// import UserIcon from '@mui/icons-material/Group';
 // import { Dashboard } from './dashboard';
 // import { authProvider } from './providers/auth';
 // import { CommentsResource } from '@myreactapp/comments';
