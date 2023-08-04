@@ -16,8 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@myreactapp/comments": ["comments/src/index.ts"],
-      "@myreactapp/modules/orders": ["modules/orders/src/index.ts"],
-      "@myreactapp/modules/products": ["modules/products/src/index.ts"],
       "@myreactapp/modules/shared/ui": ["modules/shared/ui/src/index.ts"],
       "@myreactapp/posts": ["posts/src/index.ts"]
     }
