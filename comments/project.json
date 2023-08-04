@@ -19,6 +19,15 @@
         "passWithNoTests": true,
         "reportsDirectory": "../coverage/comments"
       }
+    },
+    "component-test": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "comments/cypress.config.ts",
+        "testingType": "component",
+        "devServerTarget": "myreactapp:build",
+        "skipServe": true
+      }
     }
   }
 }
