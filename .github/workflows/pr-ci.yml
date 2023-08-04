@@ -1,0 +1,28 @@
+name: Pull Request Main CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      actions: 'read'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Using Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - run: |
+          yarn install --frozen-lockfile
+          yarn build
+          yarn test
