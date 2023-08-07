@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@myreactapp/comments": ["comments/src/index.ts"],
+      "@myreactapp/other": ["other/src/index.ts"],
       "@myreactapp/posts": ["posts/src/index.ts"]
     }
   },

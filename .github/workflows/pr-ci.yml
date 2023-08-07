@@ -16,10 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: uses Node 18
+      - name: Set Node Version - Node 18
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+          cache: 'yarn'
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v3

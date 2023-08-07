@@ -3,6 +3,7 @@ import jsonServerProvider from 'ra-data-json-server';
 import { UserList } from './users';
 import { PostList, PostEdit, PostCreate } from '@myreactapp/posts';
 import { CommentList, CommentEdit, CommentCreate } from '@myreactapp/comments';
+import { OtherList } from '@myreactapp/other';
 
 import PostIcon from '@mui/icons-material/Book';
 import UserIcon from '@mui/icons-material/Group';
@@ -37,6 +38,7 @@ export default function App() {
         edit={CommentEdit}
         create={CommentCreate}
       />
+      <Resource name="other" list={OtherList} />
     </Admin>
   );
 }

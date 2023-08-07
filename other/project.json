@@ -1,0 +1,24 @@
+{
+  "name": "other",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "other/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["other/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/other"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/other"
+      }
+    }
+  }
+}
