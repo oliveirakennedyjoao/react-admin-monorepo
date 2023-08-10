@@ -22,19 +22,15 @@
               },
               {
                 "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": ["type:ui"]
+                "onlyDependOnLibsWithTags": ["a"]
               },
               {
-                "sourceTag": "scope:orders",
-                "onlyDependOnLibsWithTags": [
-                  "scope:orders",
-                  "scope:products",
-                  "scope:shared"
-                ]
+                "sourceTag": "a",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
               },
               {
-                "sourceTag": "scope:products",
-                "onlyDependOnLibsWithTags": ["scope:products", "scope:shared"]
+                "sourceTag": "b",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
               },
               {
                 "sourceTag": "scope:shared",

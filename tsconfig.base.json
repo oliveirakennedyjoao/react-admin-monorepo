@@ -17,7 +17,8 @@
     "paths": {
       "@myreactapp/comments": ["comments/src/index.ts"],
       "@myreactapp/other": ["other/src/index.ts"],
-      "@myreactapp/posts": ["posts/src/index.ts"]
+      "@myreactapp/posts": ["posts/src/index.ts"],
+      "@myreactapp/shared/ui": ["shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
